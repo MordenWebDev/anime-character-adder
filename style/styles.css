@@ -1,0 +1,52 @@
+.form-control:focus{
+    box-shadow: none;
+    /* border-color:#ccc */
+
+}
+.mobile-button-addfeature{
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 1rem;
+}
+body{
+/* background: #FF512F;  
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  
+background: linear-gradient(to right, #F09819, #FF512F);  */
+
+
+
+}
+.person-image{
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+   
+    /* object-position: center; */
+
+}
+.edit-delete{
+    gap:10px
+}
+.edit-delete a{
+    text-decoration: none;
+}
+.cards-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.solocard{
+
+    max-height: 400px;
+  
+   
+}
