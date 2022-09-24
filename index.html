@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskmanagement-with-basic-js</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style/styles.css" />
+  </head>
+  <body onload="loadformloaclstorage()">
+
+    <div class="mobile-button-addfeature d-flex d-md-none  bg-dark ">
+  <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addperson" type="submit">add person <i class="fa-solid fa-heart-circle-plus"></i></button>
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Navbar</a>
+        <button
+          class="navbar-toggler bg-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+          </ul>
+
+          <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addperson" type="submit">add person <i class="fa-solid fa-heart-circle-plus"></i></button>
+        </div>
+      </div>
+    </nav>
+<section class="container">
+ <div class="mt-4">
+  <div class="row justify-content-center">
+  <div class="searchbar col-md-6 ">
+    <div class="input-group mb-3 shadow-lg rounded">
+  <input type="text" class="form-control" placeholder="search person" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
+</div>
+
+  </div>
+  </div>
+
+ </div>
+
+
+<!-- model for view more info on person -->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="view__more_personmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body more-person-info">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- model end for view more info for person -->
+
+
+
+
+ <!-- //model when click the add person card -->
+
+
+
+
+
+
+<!-- Modal for indidual person -->
+<div class="modal fade" id="addperson" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="return false">
+  <div class="mb-3">
+    <label for="imageurl" class="form-label">Image Url</label>
+    <input type="url" class="form-control" placeholder="https://example.com/dog.jpg" id="imageurl" aria-describedby="emailHelp" required>
+  </div>
+  <div class="mb-3">
+    <label for="personname" class="form-label">Person Name</label>
+    <input type="text" class="form-control" id="personname" required>
+  </div>
+   <div class="mb-3">
+    <label for="persontype" class="form-label">Person Type</label>
+    <input type="text" class="form-control" id="persontype" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+  <textarea class="form-control" placeholder="person description" id="description" required></textarea>
+
+</div>
+   
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" onclick="handelsubmit()">Save changes</button>
+     
+
+</form>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+<!-- end of add person model -->
+
+ <section class="cards-cointainer mt-4 ">
+  <div class="cards-div">
+
+      
+
+   
+
+  </div>
+ </section>
+</section>
+
+
+    <script src="script/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
